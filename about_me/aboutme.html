@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>About Me</title>
+     <style>
+        .listitem{
+        color:red;
+      }
+  </style>
+ </head>
+ <body>
+   <h1>About Me</h1>
+
+   <ul>
+     <li>Nickname: <span id="nickname"></span>
+     <li>Favorites:  <span id="favorites"></span>
+     <li>Hometown: <span id="hometown"></span>
+    </ul>
+
+  </body>
+ </html>
+
+  <script>
+  var body = document.getElementsByTagName('body')[0];
+
+  body.style.fontFamily = "Arial, sans-serif";
+
+  document.getElementById('nickname').innerHTML='Tyler';
+  document.getElementById('favorites').innerHTML=["About a Boy", "The number 7","Chuck: the tv show"];
+  document.getElementById('hometown').innerHTML='Wellesley';
+
+  var itemList=document.getElementsByTagName('li');
+  for (var i=0; i<itemList.length; i++){
+    itemList[i].className = 'listitem';
+  }
+
+  var newImg = document.createElement('img');
+  newImg.src = 'http://wallpapersus.com/wallpapers/2012/07/close-up-fruits-food-water-drops-blueberries-854x960.jpg';
+  body.appendChild(newImg);
+
+
+  </script>
+
+
+ </html>
+
+<!-- // Add a script tag to the bottom.
+// Change the body style so it has a font-family of "Arial, sans-serif".
+// Replace each of the spans (nickname, favorites, hometown) with your own information.
+// Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+// Create a new img element and set its src attribute to a picture of you. Append that element to the page.

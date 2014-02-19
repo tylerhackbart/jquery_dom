@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>The Book List</title>
+     <style>
+
+    </style>
+ </head>
+ <body>
+   <h1>My Book List</h1>
+
+</body>
+  <script>
+
+  var mybooks = [
+  {name: "The Girl With the Dragon Tattoo",
+  author: "Steig Larsson",
+  alreadyread: true },
+  {name: "The Hobbit",
+  author: "JRR Tolkien",
+  alreadyread: false },
+  {name: "JPod",
+  author: "Douglas Coupland",
+  alreadyread: false }
+  ];
+
+
+  for ( var i = 0; i < mybooks.length; i++) {
+    var book = document.createElement('li');
+    book.appendChild(document.createTextNode('Book: ' + mybooks[i].name +', Author: ' + mybooks[i].author));
+    document.body.appendChild(book);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- //for (var i = 0 ;i < mybooks.length; i++) {
+  //var mybook = mybooks[i];
+  //if (mybook.alreadyread === true){
+ //   console.log("You already read " + mybook.name + " by " + mybook.author);
+ // } else {
+ //   console.log("You still need to read " + mybook.name + " by " + mybook.author);
+  //}
+  //}
+
+  </script>
+ </html>
+
+<!-- // EXERCISE: The Book List
+
+// Keep track of which books you read and which books you want to read!
+
+// Create a webpage with an h1 of "My Book List".
+// Add a script tag to the bottom of the page, where all your JS will go.
+// Copy the array of books from the previous exercise.
+// Iterate through the array of books. For each book, create a p element with the book title and author and append it to the page.
+// Bonus: Use a ul and li to display the books.
+// Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
+// Bonus: Change the style of the book depending on whether you have read it or not.
